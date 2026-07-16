@@ -1,0 +1,2 @@
+# DO-S_LP2_TEST
+DO-S誕生秘話
