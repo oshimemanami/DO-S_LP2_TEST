@@ -2,8 +2,6 @@
    共通設定
    デザイン基準幅:1080px(イラレのアートボード幅)
    px指定は clamp(0px, px÷1080×100vw, px) に変換して使用する
-   → スマホでは比率で拡縮、画面が1080px以上になったら
-     px値で頭打ちにして、文字だけ際限なく大きくなるのを防ぐ
 ============================================ */
 * {
   box-sizing: border-box;
@@ -21,6 +19,12 @@ body {
   background-color: #ffffff;
 }
 
+/* 画像は幅のみ指定し、高さは本来の比率のまま自動で決まる */
+img {
+  display: block;
+  height: auto;
+}
+
 .lp-section {
   width: 100%;
   max-width: 1080px;
@@ -30,8 +34,12 @@ body {
 
 /* ============================================
    共通スペース(空白専用の要素)
-   20px / 70px / 200px
 ============================================ */
+.space-10 {
+  width: 100%;
+  height: clamp(0px, 0.93vw, 10px);
+}
+
 .space-20 {
   width: 100%;
   height: clamp(0px, 1.85vw, 20px);
@@ -49,21 +57,18 @@ body {
 
 /* ============================================
    画像の幅指定(プレースホルダー・本番画像 共通で使用)
+   高さは指定しない(imgタグ側の height:auto に任せる)
 ============================================ */
 .img-box {
   width: 90%;
   margin: 0 auto;
-  display: block;
 }
 
 .img-box--full {
   width: 100%;
 }
 
-/* ============================================
-   画像プレースホルダー(プレビュー確認用のみ)
-   本番書き出し時はimg-boxのみを持つ<img>タグに置き換える
-============================================ */
+/* プレビュー確認用のみ */
 .image-placeholder {
   background-color: #4d4d4d;
   display: flex;
@@ -83,7 +88,6 @@ body {
 
 /* ============================================
    テキストルール(左詰め)
-   text-start: 60px / title: 100px / description・detail: 50px
 ============================================ */
 .text-start {
   font-weight: 600;
@@ -107,7 +111,7 @@ body {
 .description {
   font-weight: 600;
   text-align: left;
-  font-size: clamp(0px, 4.63vw, 50px);
+  font-size: clamp(0px, 4.17vw, 45px);
   line-height: 1.6;
   width: 90%;
   margin: 0 auto;
@@ -115,6 +119,7 @@ body {
 
 /* ============================================
    詳細テキスト(アイコン付き・左詰め・Regular 400)
+   アイコンとテキストの間隔・行間は共通20px相当で統一
 ============================================ */
 .detail-list {
   width: 90%;
@@ -124,14 +129,14 @@ body {
 .detail-row {
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: clamp(0px, 1.85vw, 20px);
   width: 100%;
   margin: 0;
-  font-size: clamp(0px, 4.63vw, 50px);
+  font-size: clamp(0px, 4.17vw, 45px);
 }
 
 .detail-list .detail-row + .detail-row {
-  margin-top: 2vw;
+  margin-top: clamp(0px, 1.85vw, 20px);
 }
 
 /* プレビュー用の丸アイコン(仮) */
@@ -143,14 +148,10 @@ body {
   border-radius: 50%;
 }
 
-/* 本番用アイコン画像(images/絵文字○.webp を使用) */
+/* 本番用アイコン画像:切り抜かず、そのまま使用。幅のみ指定 */
 .detail-icon-img {
   flex-shrink: 0;
   width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
 }
 
 .detail {
@@ -163,8 +164,6 @@ body {
 /* ============================================
    商品説明(DO-S_002.webpの下に追加)
    Regular 400・中央揃え
-   商品名は基本50px、価格部分は大きく強調、
-   セット表記・税込表記はやや小さめ
 ============================================ */
 .product-info {
   font-weight: 400;
@@ -176,7 +175,7 @@ body {
 }
 
 .product-info-sub {
-  font-size: clamp(0px, 3.24vw, 35px);
+  font-size: clamp(0px, 1.85vw, 20px);
 }
 
 .product-info-price {
@@ -185,5 +184,5 @@ body {
 }
 
 .product-info-tax {
-  font-size: clamp(0px, 2.78vw, 30px);
+  font-size: clamp(0px, 1.85vw, 20px);
 }
