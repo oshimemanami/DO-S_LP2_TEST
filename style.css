@@ -68,22 +68,10 @@ img {
   width: 100%;
 }
 
-/* プレビュー確認用のみ */
-.image-placeholder {
-  background-color: #4d4d4d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.image-placeholder::before {
-  content: attr(data-filename);
-  color: #ffffff;
-  font-size: clamp(0px, 3vw, 32px);
-  font-weight: 500;
-  word-break: break-all;
-  padding: 0 2vw;
+/* 会社ロゴ(仮の幅40%・中央寄せ) */
+.logo-image {
+  width: 40%;
+  margin: 0 auto;
 }
 
 /* ============================================
@@ -139,15 +127,6 @@ img {
   margin-top: clamp(0px, 0.93vw, 10px);
 }
 
-/* プレビュー用の丸アイコン(仮) */
-.detail-icon {
-  flex-shrink: 0;
-  width: 1em;
-  height: 1em;
-  background-color: #999999;
-  border-radius: 50%;
-}
-
 /* 本番用アイコン画像:切り抜かず、そのまま使用。幅のみ指定 */
 .detail-icon-img {
   flex-shrink: 0;
@@ -157,8 +136,16 @@ img {
 .detail {
   font-weight: 400;
   text-align: left;
-  font-size: 1em;
+  font-size: clamp(0px, 3.89vw, 42px);
   line-height: 1.7;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* detail-row内(アイコン付き)で使う場合は、行内の余白計算を優先するため上書き */
+.detail-row .detail {
+  width: auto;
+  margin: 0;
 }
 
 /* ============================================
@@ -185,4 +172,156 @@ img {
 
 .product-info-tax {
   font-size: clamp(0px, 3.24vw, 35px); /* ¥7,920(70px)の半分 */
+}
+
+/* ============================================
+   space-100(セクション内の大きめの区切り)
+============================================ */
+.space-100 {
+  width: 100%;
+  height: clamp(0px, 9.26vw, 100px);
+}
+
+/* ============================================
+   角丸のベタ(単色背景ブロック)
+   色・角丸の数値は仮。決まり次第差し替え可能
+   画像プレースホルダーとは見た目を変えて区別している
+============================================ */
+.solid-block {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: clamp(0px, 3.70vw, 40px); /* 仮の角丸(40px相当) */
+  padding: clamp(0px, 6.48vw, 70px); /* 内側の余白も仮 */
+  /* 背景色は使う場所ごとに style="background-color:#xxxxxx" で個別指定 */
+}
+
+.solid-block .title,
+.solid-block .description,
+.solid-block .announce,
+.solid-block .detail {
+  width: 100%;
+}
+
+.solid-block .img-box {
+  width: 100%;
+}
+
+/* 折り返しを防ぐため、文字間を詰め、文字サイズも少しだけ縮小 */
+.title--tight {
+  letter-spacing: -0.03em;
+  font-size: clamp(0px, 8.15vw, 88px) !important;
+}
+
+/* 中央揃えユーティリティ */
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/* お客様アイコン(幅22%・中央) */
+.customer-icon {
+  width: 22%;
+  margin: 0 auto;
+}
+
+/* アナウンス文言(中央揃え・50px・説明と同じウェイト600) */
+.announce {
+  font-weight: 600;
+  text-align: center;
+  font-size: clamp(0px, 4.63vw, 50px);
+  line-height: 1.6;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ============================================
+   space-50
+============================================ */
+.space-50 {
+  width: 100%;
+  height: clamp(0px, 4.63vw, 50px);
+}
+
+/* ============================================
+   全幅ベタ(角丸なし・画面いっぱいに色を敷く)
+   角丸のベタ(.solid-block)とは別物として区別
+============================================ */
+.section-flat-bg {
+  width: 100%;
+}
+
+/* ============================================
+   テキスト_案内(text-startと同じサイズ・ウェイト、色のみ変更)
+============================================ */
+.text-guide {
+  font-weight: 600;
+  text-align: left;
+  font-size: clamp(0px, 5.56vw, 60px);
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  width: 90%;
+  margin: 0 auto;
+  color: #005599;
+}
+
+/* ============================================
+   アコーディオン
+   見出し部分:#0073bdの四角いベタ(角丸なし)
+   右端の「v」はクリックで180°回転して開閉を示す
+============================================ */
+.accordion-item {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0073bd;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  padding: clamp(0px, 1.85vw, 20px); /* 内側の余白は仮の数値 */
+  font-family: inherit;
+}
+
+.accordion-title {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: left;
+  font-size: clamp(0px, 3.89vw, 42px); /* 説明と同じサイズ・ウェイト */
+}
+
+.accordion-icon {
+  color: #ffffff;
+  font-size: clamp(0px, 3.89vw, 42px);
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-icon-img {
+  width: clamp(0px, 3.89vw, 42px);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.is-active .accordion-icon-img {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-panel.is-open {
+  max-height: 2000px;
 }
