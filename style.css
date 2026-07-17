@@ -111,7 +111,7 @@ img {
 .description {
   font-weight: 600;
   text-align: left;
-  font-size: clamp(0px, 4.17vw, 45px);
+  font-size: clamp(0px, 3.89vw, 42px);
   line-height: 1.6;
   width: 90%;
   margin: 0 auto;
@@ -129,14 +129,14 @@ img {
 .detail-row {
   display: flex;
   align-items: center;
-  gap: clamp(0px, 1.85vw, 20px);
+  gap: clamp(0px, 0.93vw, 10px);
   width: 100%;
   margin: 0;
-  font-size: clamp(0px, 4.17vw, 45px);
+  font-size: clamp(0px, 3.89vw, 42px);
 }
 
 .detail-list .detail-row + .detail-row {
-  margin-top: clamp(0px, 1.85vw, 20px);
+  margin-top: clamp(0px, 0.93vw, 10px);
 }
 
 /* プレビュー用の丸アイコン(仮) */
@@ -175,7 +175,7 @@ img {
 }
 
 .product-info-sub {
-  font-size: clamp(0px, 1.85vw, 20px);
+  font-size: clamp(0px, 3.24vw, 35px); /* ¥7,920(70px)の半分 */
 }
 
 .product-info-price {
@@ -184,5 +184,5 @@ img {
 }
 
 .product-info-tax {
-  font-size: clamp(0px, 1.85vw, 20px);
+  font-size: clamp(0px, 3.24vw, 35px); /* ¥7,920(70px)の半分 */
 }
