@@ -204,11 +204,6 @@ img {
   margin: 0 auto;
 }
 
-/* 幅80%にしたい場合はこちらを追加で付与する */
-.detail-list--80 {
-  width: 80%;
-}
-
 .detail-row {
   display: flex;
   align-items: center;
