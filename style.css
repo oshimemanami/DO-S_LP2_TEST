@@ -250,8 +250,9 @@ img {
 
 /* 本番用アイコン画像:切り抜かず、そのまま使用。幅のみ指定 */
 .detail-icon-img {
+  margin-left: 23px;
   flex-shrink: 0;
-  width: 1em;
+  width: 1.4em;
 }
 
 .detail {
@@ -364,7 +365,7 @@ img {
 
 /* 折り返しを防ぐため、文字間を詰め、文字サイズも少しだけ縮小 */
 .title--tight {
-  letter-spacing: -0.02em;
+  /*letter-spacing: -0.02em;*/
   font-size: clamp(0px, 8.15vw, 88px) !important;
 }
 
