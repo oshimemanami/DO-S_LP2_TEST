@@ -76,7 +76,7 @@ img {
 
 /* 会社ロゴ(DO-S_011用・画面幅の10%・中央寄せ) */
 .logo-image {
-  width: 15%;
+  width: 20%;
   margin: 0 auto;
 }
 
@@ -173,7 +173,7 @@ img {
   font-size: clamp(0px, 5.56vw, 60px);
   line-height: 1.6;
   letter-spacing: 0.12em;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -191,7 +191,7 @@ img {
   text-align: left;
   font-size: clamp(0px, 3.89vw, 42px);
   line-height: 1.6;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
