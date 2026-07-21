@@ -82,7 +82,7 @@ img {
 
 /* 会社ロゴ(DO-S_011専用・016/017とは別サイズで管理) */
 .logo-image-main {
-  width: 20%;
+  width: 13%;
   margin: 0 auto;
 }
 
@@ -119,10 +119,20 @@ img {
   position: absolute;
   display: block;
   /* 下記のtop/left/width/heightで範囲を調整してください(単位は%推奨) */
-  top: 35%;
-  left: 35%;
-  width: 30%;
-  height: 30%;
+  top: 81%;
+  left: 5%;
+  width: 90%;
+  height: 15%;
+}
+
+.click-zone2 {
+  position: absolute;
+  display: block;
+  /* 下記のtop/left/width/heightで範囲を調整してください(単位は%推奨) */
+  top: 48%;
+  left: 5%;
+  width: 90%;
+  height: 45%;
 }
 
 /* 画面の一番下に常に固定表示(ボタン機能は後で追加) */
