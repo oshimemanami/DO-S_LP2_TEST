@@ -250,9 +250,8 @@ img {
 
 /* 本番用アイコン画像:切り抜かず、そのまま使用。幅のみ指定 */
 .detail-icon-img {
-  margin-left: 23px;
   flex-shrink: 0;
-  width: 1.4em;
+  width: 1em;
 }
 
 .detail {
@@ -365,7 +364,7 @@ img {
 
 /* 折り返しを防ぐため、文字間を詰め、文字サイズも少しだけ縮小 */
 .title--tight {
-  /*letter-spacing: -0.02em;*/
+  letter-spacing: -0.02em;
   font-size: clamp(0px, 8.15vw, 88px) !important;
 }
 
@@ -457,15 +456,12 @@ img {
   color: #ffffff;
   font-weight: 600;
   text-align: center;
-  font-size: clamp(0px, 3.89vw, 42px);
+  font-size: clamp(0px, 3.0vw, 32px);
+  line-height: 1.3;
   flex: 1;
-}
-
-.accordion-title {
-  color: #ffffff;
-  font-weight: 600;
-  text-align: left;
-  font-size: clamp(0px, 3.89vw, 42px); /* 説明と同じサイズ・ウェイト */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .accordion-icon {
