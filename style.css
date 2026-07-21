@@ -11,12 +11,18 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
 }
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
   background-color: #ffffff;
+}
+
+/* position:fixedの要素(下部バー・モーダル)を正しく画面に固定するため、
+   overflow-x:hiddenはbodyではなく、通常コンテンツを包むこちらに設定する */
+.page-wrapper {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* 画像は幅のみ指定し、高さは本来の比率のまま自動で決まる */
