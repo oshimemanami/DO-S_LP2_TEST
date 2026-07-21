@@ -226,7 +226,7 @@ img {
 .detail {
   font-weight: 400;
   text-align: left;
-  font-size: clamp(0px, 3.89vw, 42px);
+  font-size: clamp(0px, 3.85vw, 42px);
   line-height: 1.7;
   width: 90%;
   margin: 0 auto;
