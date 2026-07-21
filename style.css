@@ -68,9 +68,9 @@ img {
   width: 100%;
 }
 
-/* 会社ロゴ(仮の幅40%・中央寄せ) */
+/* 会社ロゴ(DO-S_011用・画面幅の10%・中央寄せ) */
 .logo-image {
-  width: 40%;
+  width: 10%;
   margin: 0 auto;
 }
 
@@ -104,11 +104,66 @@ img {
   z-index: 1000;
 }
 
+/* 下部固定バー:3分割のクリックゾーン */
+.bottom-bar-zone {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 33.333%;
+}
+
+.bottom-bar-zone--left {
+  left: 0;
+}
+
+.bottom-bar-zone--center {
+  left: 33.333%;
+}
+
+.bottom-bar-zone--right {
+  right: 0;
+}
+
+/* ============================================
+   モーダル(購入先を選択)
+============================================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 3000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal-window {
+  width: 80%;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: clamp(0px, 3.70vw, 40px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: clamp(0px, 6.48vw, 70px);
+}
+
+.modal-close {
+  margin-top: clamp(0px, 6.48vw, 70px);
+  cursor: pointer;
+}
+
 /* ============================================
    テキストルール(左詰め)
 ============================================ */
 .text-start {
-  font-weight: 600;
+  font-weight: 650;
   text-align: left;
   font-size: clamp(0px, 5.56vw, 60px);
   line-height: 1.6;
@@ -118,7 +173,7 @@ img {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 700;
   text-align: left;
   font-size: clamp(0px, 9.26vw, 100px);
   line-height: 1.4;
@@ -197,7 +252,7 @@ img {
 
 .product-info-price {
   font-size: clamp(0px, 6.48vw, 70px);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .product-info-tax {
@@ -266,9 +321,14 @@ img {
   width: 100%;
 }
 
+.solid-block .detail-list {
+  width: 100%;
+  margin: 0;
+}
+
 /* 折り返しを防ぐため、文字間を詰め、文字サイズも少しだけ縮小 */
 .title--tight {
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   font-size: clamp(0px, 8.15vw, 88px) !important;
 }
 

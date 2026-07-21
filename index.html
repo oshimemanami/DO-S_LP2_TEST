@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>DO-S LP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,9 @@
   <img class="img-box" src="images/DO-S_002.webp" alt="DO-S_002">
   <div class="space-10"></div>
   <p class="product-info">DO-Sシャンプー&amp;トリートメント</p>
-  <div class="space-10"></div>
-  <p class="product-info"><span class="product-info-sub">400mlセット</span>&#12288;<span class="product-info-price">¥7,920</span><span class="product-info-tax">(税込)</span></p>
+  <p class="product-info" style="font-weight: 500;"><span class="product-info-sub">400mlセット</span>&#12288;<span class="product-info-price">¥7,920</span><span class="product-info-tax">(税込)</span></p>
   <div class="space-70"></div>
-  <img class="img-box" src="images/DO-S_003.webp" alt="DO-S_003">
+  <img class="img-box" src="images/DO-S_003.webp" alt="DO-S_003" onclick="openModal()" style="cursor: pointer;">
   <div class="space-200"></div>
 </section>
 
@@ -128,7 +127,7 @@
 <section class="lp-section">
   <div class="solid-block" style="background-color: #fff8e1;">
     <h2 class="title title--tight text-center">喜びのお声が続々!!</h2>
-    <div class="space-70"></div>
+    <div class="space-50"></div>
     <p class="description text-center">実際に使われている方々の声を紹介</p>
     <div class="space-100"></div>
 
@@ -183,7 +182,7 @@
   </div>
 
   <div class="space-100"></div>
-  <img class="img-box" src="images/DO-S_003.webp" alt="DO-S_003">
+  <img class="img-box" src="images/DO-S_003.webp" alt="DO-S_003" onclick="openModal()" style="cursor: pointer;">
 </section>
 
 <div class="space-200"></div>
@@ -488,7 +487,7 @@
     <div class="space-100"></div>
     <h2 class="title text-center" style="font-size: clamp(0px, 5.56vw, 60px);">タイトル_試す</h2>
     <div class="space-100"></div>
-    <img class="img-box" src="images/DO-S_003.webp" alt="DO-S_003">
+    <img class="img-box" src="images/DO-S_003.webp" alt="DO-S_003" onclick="openModal()" style="cursor: pointer;">
     <div class="space-100"></div>
   </div>
 
@@ -502,7 +501,7 @@
     <div class="space-70"></div>
     <p class="announce text-center">アナウンス_確かめる</p>
     <div class="space-70"></div>
-    <img class="img-box" src="images/DO-S_027.webp" alt="DO-S_027">
+    <img class="img-box" src="images/DO-S_027.webp" alt="DO-S_027" onclick="openModal()" style="cursor: pointer;">
     <div class="space-100"></div>
   </div>
 </section>
@@ -513,19 +512,37 @@
 ============================================ -->
 <section class="section-flat-bg">
   <div class="space-100"></div>
-  <img class="w-95" src="images/DO-S_020.webp" alt="DO-S_020">
+  <a href="https://www.instagram.com/dosshop55/" target="_blank" rel="noopener"><img class="w-95" src="images/DO-S_020.webp" alt="DO-S_020"></a>
   <div class="space-100"></div>
-  <img class="w-80" src="images/DO-S_021.webp" alt="DO-S_021">
+  <a href="https://www.do-s.shop/" target="_blank" rel="noopener"><img class="w-80" src="images/DO-S_021.webp" alt="DO-S_021"></a>
   <div class="space-50"></div>
-  <img class="w-80" src="images/DO-S_022.webp" alt="DO-S_022">
+  <a href="https://www.rakuten.co.jp/do-s55/" target="_blank" rel="noopener"><img class="w-80" src="images/DO-S_022.webp" alt="DO-S_022"></a>
   <div class="space-70"></div>
-  <img class="w-95" src="images/DO-S_023.webp" alt="DO-S_023">
+  <a href="https://dos-hair.com/" target="_blank" rel="noopener"><img class="w-95" src="images/DO-S_023.webp" alt="DO-S_023"></a>
   <div class="space-100"></div>
   <img class="w-full" src="images/DO-S_024.webp" alt="DO-S_024">
 </section>
 
 <!-- 画面の一番下に常に固定表示(クリック機能は後で追加予定) -->
-<img class="fixed-bottom-bar" src="images/DO-S_025.webp" alt="DO-S_025">
+<!-- 画面の一番下に常に固定表示。3分割のクリックゾーン(左:LP2/中央:lp-001/右:戻る) -->
+<div class="fixed-bottom-bar" style="position: relative;">
+  <img src="images/DO-S_025.webp" alt="DO-S_025" style="width: 100%; display: block;">
+  <a class="bottom-bar-zone bottom-bar-zone--left" href="https://oshimemanami.github.io/DO-S_LP2_TEST/" target="_blank" rel="noopener"></a>
+  <a class="bottom-bar-zone bottom-bar-zone--center" href="https://dos-hair.com/lp-001" target="_blank" rel="noopener"></a>
+  <a class="bottom-bar-zone bottom-bar-zone--right" href="javascript:void(0)" onclick="goBack()"></a>
+</div>
+
+<!-- 購入先を選択モーダル -->
+<div class="modal-overlay" id="purchaseModal">
+  <div class="modal-window">
+    <h2 class="title text-center" style="font-size: clamp(0px, 5.56vw, 60px);">購入先を選択</h2>
+    <div class="space-100"></div>
+    <a href="https://www.do-s.shop/" target="_blank" rel="noopener"><img class="img-box" src="images/DO-S_021.webp" alt="DO-S_021"></a>
+    <div class="space-70"></div>
+    <a href="https://www.rakuten.co.jp/do-s55/" target="_blank" rel="noopener"><img class="img-box" src="images/DO-S_022.webp" alt="DO-S_022"></a>
+  </div>
+  <p class="announce modal-close" onclick="closeModal()">✖️閉じる</p>
+</div>
 
 <script src="main.js"></script>
 </body>
