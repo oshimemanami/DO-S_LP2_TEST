@@ -74,8 +74,14 @@ img {
   width: 100%;
 }
 
-/* 会社ロゴ(DO-S_011用・画面幅の10%・中央寄せ) */
+/* 会社ロゴ(DO-S_016・017用・中央寄せ) */
 .logo-image {
+  width: 20%;
+  margin: 0 auto;
+}
+
+/* 会社ロゴ(DO-S_011専用・016/017とは別サイズで管理) */
+.logo-image-main {
   width: 20%;
   margin: 0 auto;
 }
@@ -99,6 +105,24 @@ img {
   width: 80%;
   margin: 0 auto;
   display: block;
+}
+
+/* ============================================
+   画像の上に、サイズ・位置を自由に調整できる
+   クリック範囲(透明)を重ねるための仕組み
+============================================ */
+.click-zone-wrap {
+  position: relative;
+}
+
+.click-zone {
+  position: absolute;
+  display: block;
+  /* 下記のtop/left/width/heightで範囲を調整してください(単位は%推奨) */
+  top: 35%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
 }
 
 /* 画面の一番下に常に固定表示(ボタン機能は後で追加) */
@@ -128,6 +152,13 @@ img {
 
 .bottom-bar-zone--right {
   right: 0;
+}
+
+/* パソコン(目安として1024px以上)ではDO-S_025(下部固定バー)を非表示にする */
+@media (min-width: 1024px) {
+  .fixed-bottom-bar {
+    display: none;
+  }
 }
 
 /* ============================================
