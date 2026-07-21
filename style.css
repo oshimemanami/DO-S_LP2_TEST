@@ -356,7 +356,7 @@ img {
 .announce {
   font-weight: 600;
   text-align: center;
-  font-size: clamp(0px, 4.63vw, 50px);
+  font-size: clamp(0px, 4.4vw, 50px);
   line-height: 1.6;
   width: 90%;
   margin: 0 auto;
