@@ -173,7 +173,7 @@ img {
   font-size: clamp(0px, 5.56vw, 60px);
   line-height: 1.6;
   letter-spacing: 0.12em;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
