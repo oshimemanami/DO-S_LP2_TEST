@@ -413,6 +413,20 @@ img {
   cursor: pointer;
   padding: clamp(0px, 1.85vw, 20px); /* 内側の余白は仮の数値 */
   font-family: inherit;
+  gap: clamp(0px, 1.85vw, 20px); /* 3つの要素の間隔 */
+}
+
+.accordion-icon-spacer {
+  width: clamp(0px, 3.89vw, 42px); /* accordion-icon-imgと同じ幅 */
+  flex-shrink: 0;
+}
+
+.accordion-title {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  font-size: clamp(0px, 3.89vw, 42px);
+  flex: 1;
 }
 
 .accordion-title {
