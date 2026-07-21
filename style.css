@@ -161,7 +161,6 @@ img {
 }
 
 .modal-close {
-  margin-top: clamp(0px, 6.48vw, 70px);
   cursor: pointer;
 }
 
