@@ -338,7 +338,7 @@ img {
   flex: 1;
 }
 
-.accordion-side-image {
+.accordion-side-image {width: 48%;   
   flex-shrink: 0;
   width: auto;
 }
