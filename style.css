@@ -259,8 +259,7 @@ img {
 }
 
 /* 本番用アイコン画像:切り抜かず、そのまま使用。幅のみ指定 */
-.detail-icon-img {
-　margin-left: 23px;
+.detail-icon-img {margin-left: 23px;
   flex-shrink: 0;
   width: 1.4em;
 }
