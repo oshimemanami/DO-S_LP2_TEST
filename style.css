@@ -209,7 +209,7 @@ img {
    テキストルール(左詰め)
 ============================================ */
 .text-start {
-  font-weight: 650;
+  font-weight: 700;
   text-align: left;
   font-size: clamp(0px, 5.56vw, 60px);
   line-height: 1.6;
@@ -249,7 +249,7 @@ img {
    対象外。従来どおり.text-startのまま。
 ============================================ */
 .accordion-text {
-  font-weight: 650;
+  font-weight: 700;
   text-align: left;
   font-size: clamp(0px, 5.56vw, 60px);
   line-height: 1.6;
